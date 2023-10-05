@@ -409,7 +409,7 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   position: relative;
-  height: 65vh;
+  height: 85vh;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -420,7 +420,7 @@ h6 {
 #hero img {
   z-index: 1;
   height: 75%;
-  padding-top: 90px;
+  padding-top: 120px;
   padding-bottom: 30px;
   -webkit-filter: drop-shadow(5px 5px 5px #222);
   filter: drop-shadow(5px 5px 5px #222);
