@@ -629,16 +629,19 @@ h6 {
 #schedule {
   padding: 60px 0 60px 0;
 }
+
 #schedule .nav-tabs {
   text-align: center;
   margin: auto;
   display: block;
   border-bottom: 0;
 }
+
 #schedule .nav-tabs li {
   display: inline-block;
   margin: 5px;
 }
+
 #schedule .nav-tabs a {
   border: 1px solid black;
   border-radius: 8px;
