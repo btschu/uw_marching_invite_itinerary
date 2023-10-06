@@ -408,122 +408,123 @@ h6 {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
+  width: 100%;
+  height: 100dvh;
+  background: url("../img/hero-bg.jpg") center center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   position: relative;
-  height: 65vh;
+  padding: 0;
   display: flex;
-  justify-content: end;
   align-items: center;
-  flex-direction: column;
-  /* padding: 0 2rem 0 0; */
+  justify-content: center;
 }
 
-#hero img {
-  z-index: 1;
-  height: 75%;
-  padding-top: 90px;
-  padding-bottom: 30px;
-  -webkit-filter: drop-shadow(5px 5px 5px #222);
-  filter: drop-shadow(5px 5px 5px #222);
-}
-.waves {
-  position:absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height:65vh;
-  margin-bottom:-7px; 
-}
-.parallax > use {
-  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
-}
-.parallax > use:nth-child(1) {
-  animation-delay: -2s;
-  animation-duration: 7s;
-}
-.parallax > use:nth-child(2) {
-  animation-delay: -3s;
-  animation-duration: 10s;
-}
-.parallax > use:nth-child(3) {
-  animation-delay: -4s;
-  animation-duration: 13s;
-}
-.parallax > use:nth-child(4) {
-  animation-delay: -5s;
-  animation-duration: 20s;
-}
-@keyframes move-forever {
-  0% {
-   transform: translate3d(-90px,0,0);
-  }
-  100% { 
-    transform: translate3d(85px,0,0);
-  }
+.bison {
+  /* -webkit-filter: invert(100%);
+  filter: invert(100%); */
+  filter: invert(86%) sepia(29%) saturate(2328%) hue-rotate(358deg) brightness(100%) contrast(105%);
+  height: 175px;
+  object-fit: contain;
 }
 
 #hero:before {
   content: "";
-  background: #212124;
+  background: rgba(0, 0, 0, 0.5);
   position: absolute;
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
 }
-#hero .hero-container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  top: 90px;
-  right: 0;
+
+#hero .container {
+  padding-top: 72px;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 0 15px;
 }
-@media (max-width: 991px) {
-  #hero .hero-container {
-    top: 70px;
+
+/* @media (max-width: 992px) {
+  #hero .container {
+    padding-top: 50px;
   }
-}
+} */
+
 #hero h1 {
-  text-transform: uppercase;
-  z-index: 1;
-  color: black;
-  font-weight: 900;
-  font-size: 5vw;
+  margin: 0;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 80px;
+  color: #fff;
+  font-family: "Varela Round", "Raleway", sans-serif;
   text-align: center;
 }
+
 #hero h1 span {
-  color: #c7a877;
+  color: gold;
 }
-@media (max-width: 991px) {
-  #hero h1 {
-    font-size: 34px;
-  }
+
+#hero h2 {
+  color: #eee;
+  margin-bottom: 10px 0 0 0;
+  font-size: 22px;
 }
-#hero p {
-  color: #ebebeb;
-  font-weight: 700;
-  font-size: 20px;
+
+#hero h2 span{
+  color: gold;
 }
-@media (max-width: 991px) {
-  #hero p {
-    font-size: 16px;
-  }
+
+#hero .btns {
+  margin-top: 30px;
 }
+
+#hero .btn-program,
+#hero .btn-book {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background-color: transparent;
+  display: inline-block;
+  padding: 12px ;
+  border-radius: 50px;
+  transition: 0.3s;
+  line-height: 1;
+  color: white;
+  border: 2px solid gold;
+  display: flex;
+  justify-content:center;
+  width: 150px;
+  margin: 0 auto;
+  
+}
+
+#hero .btn-program:hover,
+#hero .btn-book:hover {
+  background: gold;
+  color: black;
+}
+
+/* #hero .btn-book {
+  margin-left: 15px;
+} */
+
 #hero .play-btn {
+  
   width: 94px;
   height: 94px;
-  background: radial-gradient(#f82249 50%, rgba(101, 111, 150, 0.15) 52%);
+  background: radial-gradient(gold 50%, rgba(205, 164, 94, 0.4) 52%);
   border-radius: 50%;
   display: block;
   position: relative;
   overflow: hidden;
 }
-#hero .play-btn::after {
+
+/* #hero .play-btn::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -536,8 +537,9 @@ h6 {
   border-left: 15px solid #fff;
   z-index: 100;
   transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-#hero .play-btn:before {
+} */
+
+#hero .play-btn::before {
   content: "";
   position: absolute;
   width: 120px;
@@ -554,15 +556,17 @@ h6 {
   animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
-  border: 2px solid rgba(163, 163, 163, 0.4);
+  border: 5px solid rgba(205, 164, 94, 0.7);
   top: -15%;
   left: -15%;
-  background: rgba(198, 16, 0, 0);
+  /* background: rgba(198, 16, 0, 0); */
 }
+
 #hero .play-btn:hover::after {
-  border-left: 15px solid #f82249;
+  border-left: 15px solid gold;
   transform: scale(20);
 }
+
 #hero .play-btn:hover::before {
   content: "";
   position: absolute;
@@ -580,25 +584,41 @@ h6 {
   animation: none;
   border-radius: 0;
 }
-#hero .about-btn {
-  font-family: "Varela Round", "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 32px;
-  border-radius: 50px;
-  transition: 0.5s;
-  line-height: 1;
-  margin: 10px;
-  color: #fff;
-  -webkit-animation-delay: 0.8s;
-  animation-delay: 0.8s;
-  border: 2px solid #f82249;
+
+/* @media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+} */
+
+@media (max-width: 992px) {
+  #hero .play-btn {
+    /* background-attachment: scroll; */
+    margin-top: 30px;
+  }
 }
-#hero .about-btn:hover {
-  background: #c7a877;
-  color: #fff;
+
+@media (max-height: 500px) {
+  #hero {
+    height: auto;
+  }
+
+  #hero .container {
+    padding-top: 130px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 34px;
+    line-height: 50px;
+  }
+
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 @-webkit-keyframes pulsate-btn {
@@ -606,6 +626,7 @@ h6 {
     transform: scale(0.6, 0.6);
     opacity: 1;
   }
+
   100% {
     transform: scale(1, 1);
     opacity: 0;
@@ -617,6 +638,7 @@ h6 {
     transform: scale(0.6, 0.6);
     opacity: 1;
   }
+
   100% {
     transform: scale(1, 1);
     opacity: 0;
@@ -689,7 +711,7 @@ h6 {
 }
 
 #schedule .schedule-item time {
-  color: #818181;
+  color: #fff;
 }
 
 .row {
@@ -716,7 +738,7 @@ h6 {
   font-size: 18px;
   font-weight: 600;
   margin: 5px 0;
-  color: #fff;
+  color: #c7a877;
 }
 #schedule .schedule-item h4 span {
   font-style: italic;
@@ -739,7 +761,7 @@ h6 {
 }
 
 .card-body {
-  padding:0
+  padding: 0;
 }
 .card-body ul {
   padding: 10px 20px;
@@ -960,6 +982,10 @@ li input[type="checkbox"]:checked + span {
 }
 #footer .footer-top .footer-newsletter input[type="submit"]:hover {
   background: #c7a877;
+}
+
+#expectations {
+  padding-bottom: 2rem;
 }
 
 
